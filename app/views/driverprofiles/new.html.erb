@@ -1,0 +1,25 @@
+<%= flash[:notice] %>
+
+<h1>外送員註冊</h1>
+
+<%= form_for(@driverprofile) do |form| %>
+
+
+<div>
+  <%= form.label :license, '駕照上傳' %>
+  <%= form.file_field :license %>
+</div>
+<div>
+  <%= form.label :car, '車牌號碼' %>
+  <%= form.text_field :car %>
+</div>
+<div>
+  <%= form.label :account, '銀行帳戶' %>
+  <%= form.text_field :account %>
+</div>
+<div>
+  <%= form.submit '送出' %>
+</div>
+
+
+<% end %>
